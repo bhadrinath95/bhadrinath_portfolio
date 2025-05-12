@@ -1,0 +1,137 @@
+#projects-carousel {
+  width: 100vw;
+  max-width: 65rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.projects-title {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 0rem;
+    margin-bottom: 1.5rem;
+}
+
+.carousel-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: #f5f4f4;
+  border-radius: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 50rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-title {
+  font-size: 1.75rem;
+  color: #333;
+}
+
+.project-duration {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.project-description {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  max-width: 51rem;
+  color: #444;
+}
+
+.project-technologies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.technology {
+  background-color: blue;
+  color: #fff;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 1rem;
+}
+
+.prev-btn, .next-btn {
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #bbb;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover {
+  background-color: #007bff;
+  transform: scale(1.2);
+}
+
+.dot.active {
+  background-color: #007bff;
+}
+
+@media (max-width: 500px) {
+  .project-title {
+    font-size: 1.8rem;
+  }
+
+  .project-duration {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .carousel-controls {
+    top: 45%;
+  }
+
+  .prev-btn, .next-btn {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+}

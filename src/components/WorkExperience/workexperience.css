@@ -1,0 +1,104 @@
+#experience {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.experienceTitle {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 0rem;
+    margin-bottom: 1.5rem;
+}
+
+.timeline {
+    margin: 1.5rem;
+    width: 100vw;
+    max-width: 80%;
+    position: relative;
+    padding-left: 2rem;
+    border-left: 3px solid #ccc; 
+    text-align: left;
+}
+
+.timelineItem {
+    position: relative;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.timelineItem::before {
+  content: "";
+  position: absolute;
+  left: -2.7rem;
+  top: 0.6rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: blue;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px blue;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.timelineItem:hover::before {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px 4px rgba(0, 0, 255, 0.3);
+}
+
+
+.timelineContent h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.experienceDate {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: gray;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.timelineContent ul {
+    padding-left: 1rem;
+    list-style-type: disc;
+}
+
+.timelineContent li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 720px) {
+    .timelineContent h3 {
+        font-size: 4.5vw;
+    }
+    .experienceDate {
+        font-size: 2.5vw;
+    }
+    .timelineContent li {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .timelineContent h3 {
+        font-size: 5vw;
+    }
+    .experienceDate {
+        font-size: 3vw;
+    }
+    .timelineContent li {
+        font-size: 3vw;
+    }
+}
